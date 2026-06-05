@@ -1,12 +1,12 @@
 from django.views.generic import ListView
 
-from calendarapp.models import Event
+from calenderapp.models import Event
 
 
 class AllEventsListView(ListView):
     """ All event list views """
 
-    template_name = "calendarapp/events_list.html"
+    template_name = "calenderapp/events_list.html"
     model = Event
 
     def get_queryset(self):
@@ -16,7 +16,7 @@ class AllEventsListView(ListView):
 class RunningEventsListView(ListView):
     """ Running events list view """
 
-    template_name = "calendarapp/events_list.html"
+    template_name = "calenderapp/events_list.html"
     model = Event
 
     def get_queryset(self):
@@ -25,7 +25,7 @@ class RunningEventsListView(ListView):
 class UpcomingEventsListView(ListView):
     """ Upcoming events list view """
 
-    template_name = "calendarapp/events_list.html"
+    template_name = "calenderapp/events_list.html"
     model = Event
 
     def get_queryset(self):
@@ -34,7 +34,7 @@ class UpcomingEventsListView(ListView):
 class CompletedEventsListView(ListView):
     """ Completed events list view """
 
-    template_name = "calendarapp/events_list.html"
+    template_name = "calenderapp/events_list.html"
     model = Event
 
     def get_queryset(self):

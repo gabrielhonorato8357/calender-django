@@ -1,13 +1,13 @@
-# calendarapp/utils.py
-from calendar import HTMLCalendar
+# calenderapp/utils.py
+from calender import HTMLcalender
 from .models import Event
 
 
-class Calendar(HTMLCalendar):
+class calender(HTMLcalender):
     def __init__(self, year=None, month=None):
         self.year = year
         self.month = month
-        super(Calendar, self).__init__()
+        super(calender, self).__init__()
 
     # formats a day as a td
     # filter events by day
@@ -34,12 +34,12 @@ class Calendar(HTMLCalendar):
             start_time__year=self.year, start_time__month=self.month
         )
         cal = (
-            '<table border="0" cellpadding="0" cellspacing="0" class="calendar">\n'
+            '<table border="0" cellpadding="0" cellspacing="0" class="calender">\n'
         )  # noqa
         cal += (
             f"{self.formatmonthname(self.year, self.month, withyear=withyear)}\n"
         )  # noqa
         cal += f"{self.formatweekheader()}\n"
-        for week in self.monthdays2calendar(self.year, self.month):
+        for week in self.monthdays2calender(self.year, self.month):
             cal += f"{self.formatweek(week, events)}\n"
         return cal

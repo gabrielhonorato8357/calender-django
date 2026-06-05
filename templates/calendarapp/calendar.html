@@ -1,6 +1,6 @@
 {% extends 'base/base.html' %}
 {% load static %}
-{% block title %}Event Calendar{% endblock title %}
+{% block title %}Event calender{% endblock title %}
 
 {% block extracss %}
   <link href="{% static 'calender/main.css' %}" rel="stylesheet" />
@@ -8,12 +8,12 @@
 
 {% block breadcrumb %}
   <div>
-      <h1><i class="fa fa-calendar"></i> Calendar</h1>
-      <p>Event Calendar</p>
+      <h1><i class="fa fa-calender"></i> calender</h1>
+      <p>Event calender</p>
   </div>
   <ul class="app-breadcrumb breadcrumb">
       <li class="breadcrumb-item"><i class="fa fa-home fa-lg"></i></li>
-      <li class="breadcrumb-item"><a >Calendar</a></li>
+      <li class="breadcrumb-item"><a >calender</a></li>
   </ul>
 {% endblock breadcrumb %}
 
@@ -38,7 +38,7 @@
                 </div>
             </div>
             <div class="col-md-9">
-                <div id="calendar"></div>
+                <div id="calender"></div>
             </div>
 
             <div class="modal fade show" id="eventModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -138,10 +138,10 @@
       
   }
     document.addEventListener('DOMContentLoaded', function() {
-      var calendarEl = document.getElementById('calendar');
+      var calenderEl = document.getElementById('calender');
       var today = new Date();
 
-      var calendar = new FullCalendar.Calendar(calendarEl, {
+      var calender = new Fullcalender.calender(calenderEl, {
         headerToolbar: {
           left: 'prev,next today',
           center: 'title',
@@ -159,16 +159,16 @@
           modal.style.display = 'block'
           document.getElementById('id_start_time').value = converterDataParaDjangoFormat(arg.start);
           document.getElementById('id_end_time').value = converterDataParaDjangoFormat(arg.end);
-          calendar.unselect()
+          calender.unselect()
         },
         
         // THIS KEY WON'T WORK IN PRODUCTION!!!
         // To make your own Google API key, follow the directions here:
-        // http://fullcalendar.io/docs/google_calendar/
-        // googleCalendarApiKey: 'AIzaSyCqCxjjLtjbtkX37aOtWB8OfwBLy_6QuYk',
+        // http://fullcalender.io/docs/google_calender/
+        // googlecalenderApiKey: 'AIzaSyCqCxjjLtjbtkX37aOtWB8OfwBLy_6QuYk',
 
         // bangladesh Holidays
-        // events: 'bn.bd#holiday@group.v.calendar.google.com',
+        // events: 'bn.bd#holiday@group.v.calender.google.com',
         eventClick: function(arg) {
           
           console.log('clicked')
@@ -228,7 +228,7 @@
         // ]
       });
 
-      calendar.render();
+      calender.render();
     });
     const closeBtn1 = document.getElementById('modalClose1');
     const closeBtn2 = document.getElementById('modalClose2');

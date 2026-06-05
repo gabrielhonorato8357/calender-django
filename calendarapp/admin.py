@@ -1,5 +1,5 @@
 from django.contrib import admin
-from calendarapp import models
+from calenderapp import models
 
 
 @admin.register(models.Event)

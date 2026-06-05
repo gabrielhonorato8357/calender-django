@@ -40,7 +40,7 @@ class SignInViewTests(TestCase):
         response = self.client.post(self.signin_url, data=valid_data)
         
         # Check that a redirect occurs after successful login
-        self.assertRedirects(response, reverse('calendarapp:calendar'))
+        self.assertRedirects(response, reverse('calenderapp:calender'))
         # Check that the user is logged in
         self.assertEqual(response.wsgi_request.user, self.user)
 

@@ -1,4 +1,4 @@
-"""eventcalendar URL Configuration
+"""eventcalender URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/3.0/topics/http/urls/
@@ -23,5 +23,5 @@ urlpatterns = [
     path("", DashboardView.as_view(), name="dashboard"),
     path("admin/", admin.site.urls),
     path("accounts/", include("accounts.urls")),
-    path("", include("calendarapp.urls")),
+    path("", include("calenderapp.urls")),
 ]

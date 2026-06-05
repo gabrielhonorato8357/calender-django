@@ -23,9 +23,9 @@ services:
     image: postgres:latest
 
     environment:
-      POSTGRES_DB: calendar_db
+      POSTGRES_DB: calender_db
       POSTGRES_USER: user
-      POSTGRES_PASSWORD: "!!UZH_CNSP24_CALENDAR!!"
+      POSTGRES_PASSWORD: "!!UZH_CNSP24_calender!!"
 
     ports:
       - "5432:5432"

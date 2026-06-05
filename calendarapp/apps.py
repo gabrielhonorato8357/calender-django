@@ -1,5 +1,5 @@
 from django.apps import AppConfig
 
 
-class CalendarappConfig(AppConfig):
-    name = "calendarapp"
+class calenderappConfig(AppConfig):
+    name = "calenderapp"
